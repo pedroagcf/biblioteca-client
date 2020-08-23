@@ -1,0 +1,31 @@
+@import '../../../utils/scss/variables';
+
+.button {
+  border: none;
+  text-transform: uppercase;
+  padding: 15px 40px;
+  font-size: 16px;
+  font-family: 'Alata', sans-serif;
+  background-color: $main-button-color;
+  color: $normal-text-color;
+  outline: none;
+
+  &--main {
+    @extend .button;
+    background-color: $main-button-color;
+  }
+
+  &--edit {
+    @extend .button;
+    margin-right: 15px;
+    background-color: $pink;
+    font-size: 10px;
+    padding: 10px 30px;
+  }
+  &--delete {
+    @extend .button;
+    background-color: $purpple;
+    font-size: 10px;
+    padding: 10px 30px;
+  }
+}

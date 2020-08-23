@@ -1,0 +1,37 @@
+@import './../../../utils/scss/variables';
+// @import './../../../utils/scss/mixins';
+
+.header {
+  width: 100%;
+  box-sizing: border-box;
+  height: $header-height;
+  min-height: $header-height;
+  background-color: $header-background-color;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: {
+    left: 30px;
+    right: 30px;
+  }
+  box-shadow: 0px 10px 10px -5px rgba(0, 0, 0, 0.3);
+}
+
+.header__title {
+  color: $normal-text-color;
+  text-transform: uppercase;
+}
+
+.header__list {
+  display: flex;
+}
+.header__list__item a {
+  padding: 10px 15px;
+  text-decoration: none;
+  text-transform: capitalize;
+  color: $normal-text-color;
+  // display: flex;
+  &.active {
+    color: $purpple;
+  }
+}
