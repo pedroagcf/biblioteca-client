@@ -6,12 +6,12 @@ const initialState = {
   error: null,
 };
 
-const autoresDataReducer = (state = initialState, action) => {
+const editorasDataReducer = (state = initialState, action) => {
   switch (action.type) {
-    case actionTypes.FETCH_AUTORS_REQUEST:
+    case actionTypes.FETCH_EDITORAS_REQUEST:
       return { ...state, loading: true, error: null };
 
-    case actionTypes.FETCH_AUTORS_SUCCESS:
+    case actionTypes.FETCH_EDITORAS_SUCCESS:
       return {
         ...state,
         data: action.payload,
@@ -19,13 +19,13 @@ const autoresDataReducer = (state = initialState, action) => {
         error: null,
       };
 
-    case actionTypes.FETCH_AUTORS_DELETE:
+    case actionTypes.FETCH_EDITORAS_DELETE:
       return {
         ...state,
         data: state.data.filter((autor) => autor.id !== action.payload.id),
       };
 
-    case actionTypes.FETCH_AUTORS_ERROR:
+    case actionTypes.FETCH_EDITORAS_ERROR:
       return { ...state, loading: false, error: action.payload };
 
     default:
@@ -33,4 +33,4 @@ const autoresDataReducer = (state = initialState, action) => {
   }
 };
 
-export default autoresDataReducer;
+export default editorasDataReducer;

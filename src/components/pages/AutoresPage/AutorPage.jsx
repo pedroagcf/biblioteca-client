@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
@@ -6,11 +6,14 @@ import fetchAutores from '../../../actions/autoresAction';
 import AutorList from '../../organisms/AutorList/AutorList';
 
 const AutorPage = ({ autoresData, fetchAutores }) => {
+  //   const [autores, setAutores] = useState([]);
   const { loading, data, error } = autoresData;
 
   useEffect(() => {
     if (!data && !loading && !error) {
       fetchAutores();
+
+      console.log('autor page');
     }
   }, [data, loading, error, fetchAutores]);
 

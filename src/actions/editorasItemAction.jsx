@@ -3,7 +3,7 @@ import Axios from 'axios';
 
 export const deleteAutorRequest = () => {
   return {
-    type: actionTypes.FETCH_AUTOR_ITEM_REQUEST,
+    type: actionTypes.FETCH_EDITORA_ITEM_REQUEST,
   };
 };
 
