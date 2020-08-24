@@ -58,26 +58,26 @@ const LivroForm = ({ livrosData, sendLivro, showFormData, showForm }) => {
         value={formik.values.anoLancamento}
       />
       <input
-        id='ID autor'
+        id='autor'
         name='autor'
         type='text'
-        placeholder='Autor'
+        placeholder='ID Autor'
         onChange={formik.handleChange}
         value={formik.values.autor}
       />
       <input
-        id='ID genero'
+        id='genero'
         name='genero'
         type='text'
-        placeholder='Genero'
+        placeholder='ID Genero'
         onChange={formik.handleChange}
         value={formik.values.genero}
       />
       <input
-        id='ID editora'
+        id='editora'
         name='editora'
         type='text'
-        placeholder='Editora'
+        placeholder='ID Editora'
         onChange={formik.handleChange}
         value={formik.values.editora}
       />
