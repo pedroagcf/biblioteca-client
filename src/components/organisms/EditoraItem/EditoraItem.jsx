@@ -20,11 +20,7 @@ const EditoraItem = ({ editora, deleteEditora }) => {
         <p className='editora-item__info__nome'>{nome}</p>
       </div>
       <div className='button-wrapper'>
-        <Button
-          text='editar'
-          handleClick={deleteEditoraItem}
-          className='--edit'
-        />
+        <Button text='editar' className='--edit' />
         <Button
           text='deletar'
           handleClick={deleteEditoraItem}

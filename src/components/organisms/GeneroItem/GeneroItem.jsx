@@ -20,11 +20,7 @@ const GeneroItem = ({ genero, deleteGenero }) => {
         <p className='genero-item__info__nome'>{nome}</p>
       </div>
       <div className='button-wrapper'>
-        <Button
-          text='editar'
-          handleClick={deleteGeneroItem}
-          className='--edit'
-        />
+        <Button text='editar' className='--edit' />
         <Button
           text='deletar'
           handleClick={deleteGeneroItem}
