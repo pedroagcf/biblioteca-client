@@ -25,7 +25,7 @@ const AutorItem = ({ autor, deleteAutor }) => {
       <div className='button-wrapper'>
         <Button
           text='editar'
-          handleClick={deleteAutorItem}
+          // handleClick={deleteAutorItem}
           className='--edit'
         />
         <Button

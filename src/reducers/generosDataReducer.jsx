@@ -6,12 +6,12 @@ const initialState = {
   error: null,
 };
 
-const editorasDataReducer = (state = initialState, action) => {
+const generosDataReducer = (state = initialState, action) => {
   switch (action.type) {
-    case actionTypes.FETCH_EDITORAS_REQUEST:
+    case actionTypes.FETCH_GENEROS_REQUEST:
       return { ...state, loading: true, error: null };
 
-    case actionTypes.FETCH_EDITORAS_SUCCESS:
+    case actionTypes.FETCH_GENEROS_SUCCESS:
       return {
         ...state,
         data: action.payload,
@@ -19,7 +19,7 @@ const editorasDataReducer = (state = initialState, action) => {
         error: null,
       };
 
-    case actionTypes.FETCH_EDITORAS_DELETE:
+    case actionTypes.FETCH_GENEROS_DELETE:
       console.log('reducer fetch editoras delete');
 
       return {
@@ -27,7 +27,7 @@ const editorasDataReducer = (state = initialState, action) => {
         data: state.data.filter((editora) => editora.id !== action.payload.id),
       };
 
-    case actionTypes.FETCH_EDITORAS_ERROR:
+    case actionTypes.FETCH_GENEROS_ERROR:
       return { ...state, loading: false, error: action.payload };
 
     default:
@@ -35,4 +35,4 @@ const editorasDataReducer = (state = initialState, action) => {
   }
 };
 
-export default editorasDataReducer;
+export default generosDataReducer;

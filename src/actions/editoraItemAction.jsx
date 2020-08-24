@@ -1,22 +1,22 @@
 import { actionTypes, endpoints } from '../utils/js/constants';
 import Axios from 'axios';
 
-export const deleteAutorRequest = () => {
+export const deleteEditoraRequest = () => {
   return {
     type: actionTypes.FETCH_EDITORA_ITEM_REQUEST,
   };
 };
 
-export const deleteAutorSuccess = (id) => {
+export const deleteEditoraSuccess = (id) => {
   return {
-    type: actionTypes.FETCH_AUTORS_DELETE,
+    type: actionTypes.FETCH_EDITORAS_DELETE,
     payload: { id },
   };
 };
 
-export const deleteAutorError = (error) => {
+export const deleteEditoraError = (error) => {
   return {
-    type: actionTypes.FETCH_AUTOR_ITEM_ERROR,
+    type: actionTypes.FETCH_EDITORA_ITEM_ERROR,
     payload: error,
   };
 };
@@ -28,20 +28,20 @@ export const deleteAutorError = (error) => {
 //   };
 // };
 
-const deleteAutor = (id) => {
-  console.log('dentro da action');
+const deleteEditora = (id) => {
+  console.log('delete editora');
 
   return (dispatch) => {
-    dispatch(deleteAutorRequest());
-    Axios.delete(`${endpoints.AUTOR_ITEM}/${id}`)
+    dispatch(deleteEditoraRequest());
+    Axios.delete(`${endpoints.EDITORAS}/${id}`)
       .then((res) => {
-        dispatch(deleteAutorSuccess(id));
+        dispatch(deleteEditoraSuccess(id));
         // dispatch(deleteAutorAction(id));
       })
       .catch((error) => {
-        dispatch(deleteAutorError(error.message));
+        dispatch(deleteEditoraError(error.message));
       });
   };
 };
 
-export default deleteAutor;
+export default deleteEditora;

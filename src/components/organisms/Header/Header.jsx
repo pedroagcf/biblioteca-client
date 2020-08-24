@@ -1,11 +1,13 @@
 import React from 'react';
-import { useHistory, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import './Header.scss';
 const Header = () => {
   return (
     <header className='header'>
-      <h1 className='header__title'>library on</h1>
+      <h1 className='header__title'>
+        <NavLink to='/'>library on</NavLink>
+      </h1>
       {/* <Button
         text='cadastrar'
         handleClick={goToCadastrar}

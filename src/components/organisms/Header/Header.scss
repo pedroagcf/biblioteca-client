@@ -18,8 +18,11 @@
 }
 
 .header__title {
-  color: $normal-text-color;
   text-transform: uppercase;
+  a {
+    color: $normal-text-color;
+    text-decoration: none;
+  }
 }
 
 .header__list {

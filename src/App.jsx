@@ -9,11 +9,12 @@ import Header from './components/organisms/Header/Header';
 import SlickCarousel from '../src/components/organisms/SlickCarousel/SlickCarousel';
 import LivrosPage from './components/pages/LivrosPage/LivrosPage';
 import CadastroPage from './components/pages/CadastroPage/CadastroPage';
-import AutorPage from './components/pages/AutoresPage/AutorPage';
+import AutoresPage from './components/pages/AutoresPage/AutoresPage';
 import EditorasPage from './components/pages/EditorasPage/EditorasPage';
 import GeneroLiterarioPage from './components/pages/GeneroLiterarioPage/GeneroLiterarioPage';
 
 import './App.scss';
+import Button from './components/molecules/Button/Button';
 function App() {
   return (
     <Provider store={store}>
@@ -29,9 +30,12 @@ function App() {
                 <EditorasPage />
               </Route>
               <Route path='/autor'>
-                <AutorPage />
+                <AutoresPage />
               </Route>
               <Route path='/livro'>
+                <LivrosPage />
+              </Route>
+              <Route path='/livro/:livroId'>
                 <LivrosPage />
               </Route>
               <Route path='/cadastrar'>

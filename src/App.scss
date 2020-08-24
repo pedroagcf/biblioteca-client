@@ -8,6 +8,7 @@
 .app-bibliteca__main {
   flex-grow: 1;
   display: flex;
+  justify-content: space-between;
   flex-direction: column;
   background-color: #eeeeee;
   overflow: auto;
